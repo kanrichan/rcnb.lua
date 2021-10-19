@@ -2,7 +2,7 @@
 ---@Author: Kanri
 ---@Date: 2021-10-18 12:42:44
 ---@LastEditors: Kanri
----@LastEditTime: 2021-10-19 17:14:11
+---@LastEditTime: 2021-10-19 17:42:01
 ---@Description: Everything can be ecnoded into crNB with Lua.
 
 local insert, concat = table.insert, table.concat
@@ -156,6 +156,7 @@ function decode(str)
     return table.unpack(bytes)
 end
 
---print(string.byte('测试', 1, 100))
-print(ecnode(string.byte('测试', 1, -1)))
-print(string.char(decode(ecnode(string.byte('测试', 1, -1)))))
+return {
+    encode = ecnode,
+    decode = decode
+}
