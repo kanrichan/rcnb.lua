@@ -2,11 +2,11 @@
 ---@Author: Kanri
 ---@Date: 2021-10-19 17:43:31
 ---@LastEditors: Kanri
----@LastEditTime: 2021-10-19 18:39:37
+---@LastEditTime: 2021-10-20 11:04:50
 ---@Description: test rcnb
 
-rcnb = require('rcnb')
+local rcnb = require('src/rcnb')
 -- encode ȐȼŃƅȓčƞÞƦȻƝƃŖć
-print(rcnb.encode(string.byte('Who NB?', 1, -1)))
+print(rcnb:encode(string.byte('Who NB?', 1, -1)))
 -- decode RCNB!
-print(string.char(rcnb.decode('ȐĉņþƦȻƝƃŔć')))
+print(string.char(rcnb:decode('ȐĉņþƦȻƝƃŔć')))

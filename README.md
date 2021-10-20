@@ -24,10 +24,9 @@ luarocks install rcnb
 ## Usage
 
 ```
-rcnb = require('rcnb')
+local rcnb = require('rcnb')
 -- encode ȐȼŃƅȓčƞÞƦȻƝƃŖć
-print(rcnb.encode(string.byte('Who NB?', 1, -1)))
+print(rcnb:encode(string.byte('Who NB?', 1, -1)))
 -- decode RCNB!
-print(string.char(rcnb.decode('ȐĉņþƦȻƝƃŔć')))
+print(string.char(rcnb:decode('ȐĉņþƦȻƝƃŔć')))
 ```
-
